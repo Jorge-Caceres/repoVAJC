@@ -65,6 +65,22 @@
     End Property
     'metodos
 
+    Public Function CalcularIMC() As String
+        Dim imc As Decimal = 0
+        Dim retorno As String = ""
+        imc = Me.Peso / (Me.Altura ^ 2)
+        Select Case imc
+            Case < 20
+                retorno = "Usted es delgado"
+            Case 20 To 25
+                retorno = "Usted està en su Peso ideal"
+            Case > 25
+                retorno = "Usted tiene Sobrepeso"
+        End Select
+        Return retorno
+
+    End Function
+
 
 
 
