@@ -148,6 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="Controllers\EstacionamientoController.vb" />
     <Compile Include="Controllers\HomeController.vb" />
     <Compile Include="Controllers\PacienteController.vb" />
     <Compile Include="Global.asax.vb">
@@ -208,6 +209,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Estacionamiento\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
