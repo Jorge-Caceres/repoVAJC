@@ -42,7 +42,6 @@ C:\Users\alumno-203\visualAvanzado\Demo2\Demo2\bin\System.Web.Webpages.Deploymen
 C:\Users\alumno-203\visualAvanzado\Demo2\Demo2\bin\System.Web.Webpages.Razor.xml
 C:\Users\alumno-203\visualAvanzado\Demo2\Demo2\bin\System.Web.Helpers.xml
 C:\Users\alumno-203\visualAvanzado\Demo2\Demo2\bin\System.Web.Mvc.xml
-C:\Users\alumno-203\visualAvanzado\Demo2\Demo2\obj\Debug\Demo2.vbprojResolveAssemblyReference.cache
 C:\Users\alumno-203\visualAvanzado\Demo2\Demo2\obj\Debug\Demo2.Resources.resources
 C:\Users\alumno-203\visualAvanzado\Demo2\Demo2\obj\Debug\Demo2.vbproj.GenerateResource.Cache
 C:\Users\alumno-203\visualAvanzado\Demo2\Demo2\obj\Debug\Demo2.dll
