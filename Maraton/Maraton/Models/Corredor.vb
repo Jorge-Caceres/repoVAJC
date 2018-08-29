@@ -1,4 +1,7 @@
-﻿Public Class Corredor
+﻿
+''definicion de la clase como   CLASE BASE no instanciable
+Public MustInherit Class Corredor
+
     Protected NroCorredor As Integer
     Protected NroDocumento As Integer
     Protected Nombre As String
@@ -69,4 +72,51 @@
             MontoInscripcion = value
         End Set
     End Property
+
+    'metodos de la clase padre
+
+
+
+
 End Class
+
+'CLASE QUE HEREDA 
+Public Class Elite
+    Inherits Corredor
+    Private Hotel As String
+
+    Public Property Hotel1 As String
+        Get
+            Return Hotel
+        End Get
+        Set(value As String)
+            Hotel = value
+        End Set
+    End Property
+End Class
+
+Public Class Aficionado
+    Inherits Corredor
+
+    Private Telefono As String
+    Private Email As String
+
+    Public Property Telefono1 As String
+        Get
+            Return Telefono
+        End Get
+        Set(value As String)
+            Telefono = value
+        End Set
+    End Property
+
+    Public Property Email1 As String
+        Get
+            Return Email
+        End Get
+        Set(value As String)
+            Email = value
+        End Set
+    End Property
+End Class
+
