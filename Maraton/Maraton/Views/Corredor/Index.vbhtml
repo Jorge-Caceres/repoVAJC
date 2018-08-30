@@ -57,7 +57,7 @@ input[type=submit]:hover {
 
                     Numero de documento<input type="text" name="documento" placeholder="Ingrese su documento" />
                     Numero de corredor<input type="text" name="numero" placeholder="Ingrese su numero de corredor" />
-                    Fecha de nacimiento<input type="date" name="fecha" /><br />
+                    Fecha de nacimiento<input type="text" name="fecha" /><br />
                     Nacionalidad
                             <select name="cboNacionalidad">
                             <option value="Paraguaya">Paraguaya</option>

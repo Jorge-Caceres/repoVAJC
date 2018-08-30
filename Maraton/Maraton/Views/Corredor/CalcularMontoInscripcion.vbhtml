@@ -10,8 +10,7 @@ End Code
     <meta name="viewport" content="width=device-width" />
     <title>CalcularMontoInscripcion</title>
 </head>
-<body>
-    <div> 
-    </div>
+<body><h1>@ViewData("Monto")</h1>
+    <h1>@ViewData("Nombre")</h1>
 </body>
 </html>
