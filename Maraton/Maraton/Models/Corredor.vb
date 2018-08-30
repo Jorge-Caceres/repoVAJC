@@ -74,7 +74,30 @@ Public MustInherit Class Corredor
     End Property
 
     'metodos de la clase padre
+    Public Function GetMontoInscripcion() As Double
+        ''18 a 29 40 dolares
+        ''30 a  39 30d\
+        ''40 y mas 20d
+        Dim vEdad As Integer
+        Dim monto As Double
+        Dim afic As New Aficionado
+        vEdad = DateDiff(DateInterval.Year, Me.FechaNacimiento1, Date.Today)
 
+        If Me.NroCorredor <= 50 Then
+            ''los primeros cincuenta corredores corresponden al subtipo ELITE y no se les cobra nada
+            monto = 0
+        Else
+            Select Case vEdad
+                Case 18 To 29
+                    monto = 40
+                Case 30 To 39
+                    monto = 30
+                Case >= 40
+                    monto = 20
+            End Select
+        End If
+        Return monto
+    End Function
 
 
 
