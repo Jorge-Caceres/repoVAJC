@@ -105,38 +105,30 @@ Public Class SinTraccion
         End Set
     End Property
 
-    Public Function CalcularImpuestoST() As Decimal
-        Dim vImpuestoTotal As Decimal
+    Public Overrides Sub CalcularImpuesto()
         MyBase.CalcularImpuesto()
-        vImpuestoTotal = Monto1 * 1.01
-        Return vImpuestoTotal
-    End Function
+
+        Monto1 = Monto1 * 1.01
+
+    End Sub
 
 End Class
 
 Public Class Automovil
     Inherits Traccion
-
-    Public Function CalcularImpuestoT() As Decimal
-
-        Dim vMontoRecargado As Decimal
-        CalcularImpuesto()
-        vMontoRecargado = Monto1 * 1.3
-        Return vMontoRecargado
-    End Function
+    Public Overrides Sub CalcularImpuesto()
+        MyBase.CalcularImpuesto()
+        Monto1 = Monto1 * 1.3
+    End Sub
 
 End Class
 
 Public Class Utilitario
     Inherits Traccion
-    Public Function CalcularImpuestoT() As Decimal
-
-        Dim vMontoRecargado As Decimal
+    Public Overrides Sub CalcularImpuesto()
         MyBase.CalcularImpuesto()
-        vMontoRecargado = Monto1 * 1.1
-        Return vMontoRecargado
-    End Function
-
+        Monto1 = Monto1 * 1.1
+    End Sub
 End Class
 
 Public Class Motocicleta
