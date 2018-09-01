@@ -70,7 +70,7 @@ End Code
 </head>
 <body>
     <div class="container">
-        <form method="post" action="CalcularMontoPagar">
+        <form method="post" action="CalcularMonto">
             <h3>Datos del vehiculo</h3>
             Tipo Vehiculo<select name="cboTipo" required>
                 <option value="T">Con Traccion</option>

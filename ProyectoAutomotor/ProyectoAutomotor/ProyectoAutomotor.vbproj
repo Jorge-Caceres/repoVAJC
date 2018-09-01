@@ -201,6 +201,7 @@
     <Content Include="Views\Index\Index.vbhtml" />
     <Content Include="Views\Vehiculo\Index.vbhtml" />
     <Content Include="Views\Vehiculo\CalcularMontoPagar.vbhtml" />
+    <Content Include="Views\Vehiculo\CalcularMonto.vbhtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

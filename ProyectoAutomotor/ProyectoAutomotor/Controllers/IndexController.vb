@@ -9,8 +9,5 @@ Namespace Controllers
             Return View()
         End Function
 
-        Function CalcularImpuesto(form As FormCollection) As ActionResult
-
-        End Function
     End Class
 End Namespace
