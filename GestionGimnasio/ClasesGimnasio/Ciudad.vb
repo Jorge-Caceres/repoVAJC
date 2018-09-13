@@ -1,4 +1,7 @@
-﻿Public Class Ciudad
+﻿Imports ClasesGimnasio.Util
+
+
+Public Class Ciudad
 
     Private CiudadId As Integer
     Private Descripcion As String
@@ -20,4 +23,16 @@
             Descripcion = value
         End Set
     End Property
+
+    Public Function ObtenerCiudades() As DataTable
+        Return gDatos.TraerDataTable("spConsultarCiudades")
+    End Function
+
+    Sub Guardar()
+        gDatos.Ejecutar("spInsertarCiudad", Me.Descripcion)
+    End Sub
+
+    Sub Actualizar()
+        gDatos.Ejecutar("spActualizarCiudad", Me.CiudadId, Me.Descripcion)
+    End Sub
 End Class
