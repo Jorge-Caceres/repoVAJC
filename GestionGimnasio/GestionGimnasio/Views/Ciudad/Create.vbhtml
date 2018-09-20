@@ -12,7 +12,7 @@ End Code
 </head>
 <body>
     <h1>Formulario para agregar una ciudad</h1>
-    <form method="post" action="Ciudad/Create">
+    <form method="post" action="~/Ciudad/Create">
         Ciudad:
         <input type="text" name="txtCiudad" placeholder="Ingrese el nombre de la ciudad"/>
         <br /><br />

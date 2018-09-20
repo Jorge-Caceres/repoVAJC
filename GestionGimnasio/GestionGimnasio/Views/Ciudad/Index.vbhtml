@@ -36,6 +36,9 @@ th {
 </head>
 <body>
     <h1>Manteninimiento de ciudades</h1>
+
+    <a href="~/Ciudad/Create">Nueva Ciudad</a>
+    <a href="~/Ciudad/Edit">Modificar Ciudad</a>
     <table width=50>
         <tr>
             <th>Codigo</th>
@@ -45,6 +48,8 @@ th {
                 @<tr>
                     <td>@row("CiudadId")</td>
                     <td>@row("Descripcion")</td>
+                    <td><a href="~/Ciudad/Edit/@row("CiudadId")">Modificar</a></td>
+                    <td>><a href="~/Ciudad/Delete/@row("CiudadId")">Eliminar</a></td>
                  </tr>
             Next
      </table>

@@ -51,5 +51,13 @@ Namespace Controllers
             ''se redirecciona a la accion index
             Return RedirectToAction("Index")
         End Function
+
+        Function Delete(id As Integer) As ActionResult
+            Dim ciudad As New Ciudad
+            ciudad.CiudadId1 = id
+            ciudad.Eliminar()
+
+            Return RedirectToAction("Index")
+        End Function
     End Class
 End Namespace
