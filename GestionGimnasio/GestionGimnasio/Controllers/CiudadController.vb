@@ -31,5 +31,25 @@ Namespace Controllers
             ''se redirecciona a la accion index
             Return RedirectToAction("Index")
         End Function
+
+        Function Edit(id As Integer) As ActionResult
+            Dim ciudad As New Ciudad
+
+            ciudad = ciudad.ObtenerCiudad(id)
+
+            Return View(ciudad)
+        End Function
+
+        <HttpPost()>
+        Function Edit(form As FormCollection) As ActionResult
+            Dim ciudad As New Ciudad
+            ''se cargan las propiedades del objeto ciudad 
+            ciudad.Descripcion1 = form("txtCiudad")
+            ciudad.CiudadId1 = form("id")
+            ''se llama al metodo que a su vez llama al procedimiento de almacenado
+            ciudad.Actualizar()
+            ''se redirecciona a la accion index
+            Return RedirectToAction("Index")
+        End Function
     End Class
 End Namespace

@@ -199,6 +199,7 @@
     <Content Include="Views\Home\Index.vbhtml" />
     <Content Include="Views\Ciudad\Index.vbhtml" />
     <Content Include="Views\Ciudad\Create.vbhtml" />
+    <Content Include="Views\Ciudad\Edit.vbhtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
