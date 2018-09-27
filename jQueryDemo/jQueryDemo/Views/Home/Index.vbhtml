@@ -19,8 +19,12 @@ End Code
     <br /><br />
     Resultado: <input type="text" id="resultado" />
     <br /><br />
-    <h1 id="titulo"></h1>
-    <br /><br />
+    <table>
+        <tr>
+            <td id="titulo"></td>
+        </tr>
+    </table>
+        <br /><br />
     <input type="button" value="Calcular" onclick="javascript:Calcular()" />
     <script src="~/scripts/jquery-3.3.1.min.js" type="text/javascript"></script>
     
@@ -40,7 +44,8 @@ End Code
                 //El tipo de dato de dato que va retornar la acción
                 dateType: 'json',
                 success: function (retorno) {
-                    $("#titulo").val(retorno);
+                    $("#resultado").val(retorno);
+                    $("#titulo").html("<td>" + retorno+"</td>");
                 }
             })//fin del ajax
         }//fin de la funcion JS
