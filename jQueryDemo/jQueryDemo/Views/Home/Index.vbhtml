@@ -15,18 +15,35 @@ End Code
     Valor 1:<input type="text" id="valor1" />
     <br /><br />
     Valor 2:<input type="text" id="valor2" />
-    <br /><br />
-    <input type="button" value="Calcular" onclick="javascript:Calcular()"/>
     
+    <br /><br />
+    Resultado: <input type="text" id="resultado" />
+    <br /><br />
+    <h1 id="titulo"></h1>
+    <br /><br />
+    <input type="button" value="Calcular" onclick="javascript:Calcular()" />
     <script src="~/scripts/jquery-3.3.1.min.js" type="text/javascript"></script>
     
     <script type="text/javascript">
         function Calcular() {
-            alert("Prueba de JS");
-            alert($("#valor1").val());
-            $("#valor2").val(150);
+            //alert("Prueba de JS");
+            //alert($("#valor1").val());
+            //$("#valor2").val(150);
 
-        }
+            $.ajax({
+                //La url para la petición
+                url: '/Home/Calcular',
+                //Definimos parametros que se va enviar
+                data: { valor1: $("#valor1").val(), valor2: $("#valor2").val() },
+                //La forma de envio Post o get
+                type: 'GET',
+                //El tipo de dato de dato que va retornar la acción
+                dateType: 'json',
+                success: function (retorno) {
+                    $("#titulo").val(retorno);
+                }
+            })//fin del ajax
+        }//fin de la funcion JS
     </script>
 </body>
 </html>

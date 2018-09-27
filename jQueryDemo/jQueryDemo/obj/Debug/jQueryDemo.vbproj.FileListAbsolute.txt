@@ -47,3 +47,4 @@ D:\repoVAJC\jQueryDemo\jQueryDemo\obj\Debug\jQueryDemo.vbproj.GenerateResource.C
 D:\repoVAJC\jQueryDemo\jQueryDemo\obj\Debug\jQueryDemo.dll
 D:\repoVAJC\jQueryDemo\jQueryDemo\obj\Debug\jQueryDemo.xml
 D:\repoVAJC\jQueryDemo\jQueryDemo\obj\Debug\jQueryDemo.pdb
+D:\repoVAJC\jQueryDemo\jQueryDemo\obj\Debug\jQueryDemo.vbprojResolveAssemblyReference.cache
