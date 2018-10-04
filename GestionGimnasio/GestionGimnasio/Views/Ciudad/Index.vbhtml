@@ -8,50 +8,52 @@ End Code
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link href="~/scripts/css/bootstrap.min.css" rel="stylesheet" />
     <title>Ciudades</title>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Krub" rel="stylesheet">
+
     <style>
-       body {
-    background-color: lightblue;
-}
-table {
-    border-collapse: collapse;
-    width: 50%;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    table-layout: fixed;
+        body{
+            
 
-}
+    font-family: 'Krub', sans-serif;
 
-th, td {
-    text-align: left;
-    padding: 8px;
-}
 
-tr:nth-child(even){background-color: #f2f2f2}
-
-th {
-    background-color: #4CAF50;
-    color: white;
-}
-        </style>
+        }
+    </style>
 </head>
 <body>
-    <h1>Manteninimiento de ciudades</h1>
+    <div class="container">
+    <h1 class="display-4">Manteninimiento de ciudades</h1>
 
-    <a href="~/Ciudad/Create">Nueva Ciudad</a>
-    <a href="~/Ciudad/Edit">Modificar Ciudad</a>
-    <table width=50>
-        <tr>
-            <th>Codigo</th>
-            <th>Nombre</th>
-        </tr>
-            @For Each row In ViewData("listaCiudades")
-                @<tr>
-                    <td>@row("CiudadId")</td>
-                    <td>@row("Descripcion")</td>
-                    <td><a href="~/Ciudad/Edit/@row("CiudadId")">Modificar</a></td>
-                    <td>><a href="~/Ciudad/Delete/@row("CiudadId")">Eliminar</a></td>
-                 </tr>
-            Next
-     </table>
+    <a href="~/Ciudad/Create" class="btn btn-primary">Nueva Ciudad</a>
+    <a href="~/Ciudad/Edit" class="btn btn-primary">Modificar Ciudad</a>
+        <table width=50 class="table table-hover">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Codigo</th>
+                        <th>Nombre</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @For Each row In ViewData("listaCiudades")
+            @<tr>
+                <td>@row("CiudadId")</td>
+                <td>@row("Descripcion")</td>
+                <td>
+                    <a href="~/Ciudad/Edit/@row("CiudadId")" class="btn btn-outline-warning">Modificar</a>
+                    <a href="~/Ciudad/Delete/@row("CiudadId")" class="btn btn-outline-danger">Eliminar</a>
+                </td>
+            </tr>
+                    Next
+                </tbody>
+            </table>
+        </div>
+        
+    <script src="~/scripts/js/jquery-3.3.1.min.js"></script>
+    <script src="~/scripts/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -33,11 +33,10 @@ Namespace Controllers
         End Function
 
         Function Edit(id As Integer) As ActionResult
-            Dim ciudad As New Ciudad
+            Dim vCiudad As New Ciudad
+            vCiudad = vCiudad.ObtenerCiudad(id)
 
-            ciudad = ciudad.ObtenerCiudad(id)
-
-            Return View(ciudad)
+            Return View(vCiudad)
         End Function
 
         <HttpPost()>

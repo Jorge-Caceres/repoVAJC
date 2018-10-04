@@ -7,7 +7,7 @@ Namespace Controllers
         ' GET: Home
         Function Index() As ActionResult
             ''se inicializa la conexion a la BD
-            Util.inicializaSesion("M203-13", "Gym", "sa", "@lumno123")
+            Util.inicializaSesion("M203-02", "Gym", "sa", "@lumno123")
 
             Return View()
         End Function
